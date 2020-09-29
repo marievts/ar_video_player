@@ -37,6 +37,12 @@
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
+
+      <a-assets>
+        <video id="video-test" src="/video_test.mp4"></video>
+        <video id="video-test2" src="https://arjs-cors-proxy.herokuapp.com/https://www.youtube.com/watch?v=W2fFuonfyjg" crossorigin></video>
+      </a-assets>
+
       <!-- we use cors proxy to avoid cross-origin problems -->
       <a-nft
         type="nft"
@@ -47,11 +53,11 @@
         smoothThreshold="5"
       >
         <a-video
-          src="/video_test.mp4"
+          src="#video-test"
           preload="auto"
           webkit-playsinline=""
           playsinline=""
-          autoplay="true"
+          autoplay
           crossorigin="true"
           width="36"
           height="72"
